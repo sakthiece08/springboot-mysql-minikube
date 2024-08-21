@@ -25,6 +25,7 @@
 14) Remove or delete deployed setup from kubernetes cluster : **_helm uninstall mychart_**
 15) Stop minikube using : **_minikube stop_**
 
+Refer the postman collection as part of this Github repository to see API requests.
 Please read this blog for complete details of this implementation - https://medium.com/@Teqmonic/deploy-spring-boot-with-mysql-on-minikube-cluster-using-helm-f7185e5ad4fa
 
 ### commands executed

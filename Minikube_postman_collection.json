@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "8ba934a1-07ee-44ab-b6b8-06043b16249e",
+		"name": "Minikube springboot-mysql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2931585"
+	},
+	"item": [
+		{
+			"name": "Add exchange rate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"source_currency\": \"USD\",\n    \"target_currency\": \"INR\",\n    \"rate\":80\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/exchange-rate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exchange-rate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add exchange rate - EKS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"source_currency\": \"COL\",\n    \"target_currency\": \"INR\",\n    \"rate\":0.5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://spring-alb-test-619761434.us-east-1.elb.amazonaws.com/exchange-rate",
+					"protocol": "http",
+					"host": [
+						"spring-alb-test-619761434",
+						"us-east-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"exchange-rate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get exchange rate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/exchange-rate/source_currency/USD/target_currency/EUR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exchange-rate",
+						"source_currency",
+						"USD",
+						"target_currency",
+						"EUR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get exchange rate - EKS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://spring-alb-test-902113315.us-east-1.elb.amazonaws.com/exchange-rate/source_currency/COL/target_currency/INR",
+					"protocol": "http",
+					"host": [
+						"spring-alb-test-902113315",
+						"us-east-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"exchange-rate",
+						"source_currency",
+						"COL",
+						"target_currency",
+						"INR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
