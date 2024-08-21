@@ -1,0 +1,20 @@
+replicaCount: 1
+
+mysql:
+  databaseName: exchangeRate
+
+springApp:
+  image:
+    repository: springboot-mysql-minikube
+    pullPolicy: IfNotPresent
+    tag: latest
+
+mysqlVolume:
+  persistentVolumeClaim:
+    storageSize: 500Mi  #1Gi
+
+  persistentVolume:
+    storageSize: 500Mi
+    pathOnHost: /var/lib/mysql
+
+  mountPath: /var/lib/mysql

@@ -67,7 +67,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>springboot-mysql-minikube</finalName>
+		<finalName>${artifactId}</finalName>
 	</build>
 
 </project>
