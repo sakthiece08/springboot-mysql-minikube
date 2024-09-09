@@ -14,9 +14,9 @@
 3) Start docker desktop on the system
 4) Start minikube using minikube start --driver=docker
 5) Enable docker env using command : **_eval $(minikube docker-env)**_ 
-6) Package the application using ./mvnw clean package -DSkpitest=true
-7) Build docker image in minikube : docker build -t springboot-mysql-minikube:latest .
-8) To see the created image run command : minikube image ls
+6) Package the application using <B><I> ./mvnw clean package -DSkiptest=true <I></B>
+7) Build docker image in minikube :  <B><I>docker build -t springboot-mysql-minikube:latest .<I></B>
+8) To see the created image run command : <B><I>minikube image ls<I></B>
 9) To deploy on kubernetes cluster run command : **_helm install myapp-chart spring-app-chart_**
 10) To see deployed helm chart : **_helm ls_**
 11) Check deployments : kubectl get all
